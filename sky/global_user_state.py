@@ -552,8 +552,6 @@ def get_clusters_from_history() -> List[Dict[str, Any]]:
         'LEFT OUTER JOIN clusters '
         'ON ch.cluster_hash=clusters.cluster_hash ').fetchall()
 
-    # '(cluster_hash, name, num_nodes, requested_resources, '
-    #         'launched_resources, usage_intervals) '
     records = []
 
     for row in rows:
